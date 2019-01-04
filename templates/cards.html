@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for card in cards %}
+    <li> <b>Card number: </b> {{card.mediumId}}  <a href='{{url_for("get_transactions", id=card.mediumId)}}'>Get the transactioins</a><a href='{{url_for("get_routes", id=card.mediumId)}}'>Get the routes</a></li>
+    <ul>
+        {%for k,v in card.items() %}
+
+        <li><b>{{k}}: </b> {{v}}</li>
+        {%endfor%}
+    </ul>
+    {%endfor%}
+</ul>
+</body>
+</html>

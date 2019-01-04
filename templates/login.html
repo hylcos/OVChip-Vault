@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+</head>
+<body>
+{% if message %}
+{{message}}
+{%endif%}
+<form action="/login" method="post">
+    <p>Username: <input id="username" name="username" type="text"/></p>
+    <p>Password: <input id="password" name="password" type="password"/></p>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
